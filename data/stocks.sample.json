@@ -1,0 +1,168 @@
+{
+  "generatedAt": "2026-05-17T16:11:33.463567+00:00",
+  "thresholdCrore": 1000,
+  "source": "EQUITY_L.csv, SME_EQUITY_L.csv, NSE quote data, Yahoo Finance chart data",
+  "stockCount": 2,
+  "stocks": [
+    {
+      "symbol": "360ONE",
+      "name": "360 ONE WAM LIMITED",
+      "series": "EQ",
+      "segment": "NSE",
+      "isin": "INE466L01038",
+      "listingDate": "19-SEP-2019",
+      "exchange": "NSE",
+      "fundamentals": {
+        "marketCapCrore": 44286.18,
+        "freeFloatMarketCapCrore": 28268.000901471,
+        "lastPrice": 1090.0,
+        "close": 1093.8,
+        "previousClose": 1102.1,
+        "changePercent": -1.0979040014517656,
+        "vwap": 1103.62,
+        "currency": "INR",
+        "macro": "Financial Services",
+        "sector": "Financial Services",
+        "industry": "Capital Markets",
+        "basicIndustry": "Stockbroking & Allied",
+        "symbolPE": 36.54,
+        "sectorPE": 36.54,
+        "estimatedEPS": 29.83,
+        "faceValue": 1.0,
+        "issuedSize": 406295220.0,
+        "fiftyTwoWeekHigh": 1273.8,
+        "fiftyTwoWeekHighDate": "07-Jul-2025",
+        "fiftyTwoWeekLow": 906.05,
+        "fiftyTwoWeekLowDate": "07-Apr-2026",
+        "tradedVolumeLakhs": 6.85,
+        "tradedValueCrore": 75.59,
+        "dailyVolatility": 2.17,
+        "annualVolatility": 41.46,
+        "tradingStatus": "Active",
+        "classOfShare": "Equity"
+      },
+      "history": [
+        {
+          "date": "04-May",
+          "close": 1066.5
+        },
+        {
+          "date": "05-May",
+          "close": 1070.7
+        },
+        {
+          "date": "06-May",
+          "close": 1084.1
+        },
+        {
+          "date": "07-May",
+          "close": 1111.7
+        },
+        {
+          "date": "08-May",
+          "close": 1118.5
+        },
+        {
+          "date": "11-May",
+          "close": 1115.3
+        },
+        {
+          "date": "12-May",
+          "close": 1078.1
+        },
+        {
+          "date": "13-May",
+          "close": 1077.5
+        },
+        {
+          "date": "14-May",
+          "close": 1102.1
+        },
+        {
+          "date": "15-May",
+          "close": 1093.8
+        }
+      ]
+    },
+    {
+      "symbol": "3BBLACKBIO",
+      "name": "3B Blackbio Dx Limited",
+      "series": "EQ",
+      "segment": "NSE",
+      "isin": "INE994E01018",
+      "listingDate": "20-APR-2026",
+      "exchange": "NSE",
+      "fundamentals": {
+        "marketCapCrore": 1181.83,
+        "freeFloatMarketCapCrore": 683.1199460739999,
+        "lastPrice": 1377.0,
+        "close": 1371.7,
+        "previousClose": 1370.6,
+        "changePercent": 0.46694878155552977,
+        "vwap": 1374.8,
+        "currency": "INR",
+        "macro": "Healthcare",
+        "sector": "Healthcare",
+        "industry": "Healthcare Services",
+        "basicIndustry": "Healthcare Service Provider",
+        "symbolPE": null,
+        "sectorPE": null,
+        "estimatedEPS": null,
+        "faceValue": 10.0,
+        "issuedSize": 8582670.0,
+        "fiftyTwoWeekHigh": 1424.7,
+        "fiftyTwoWeekHighDate": "15-May-2026",
+        "fiftyTwoWeekLow": 1166.5,
+        "fiftyTwoWeekLowDate": "30-Apr-2026",
+        "tradedVolumeLakhs": 0.06,
+        "tradedValueCrore": 0.85,
+        "dailyVolatility": 3.34,
+        "annualVolatility": 63.81,
+        "tradingStatus": "Active",
+        "classOfShare": "Equity"
+      },
+      "history": [
+        {
+          "date": "04-May",
+          "close": 1258.5
+        },
+        {
+          "date": "05-May",
+          "close": 1283.0
+        },
+        {
+          "date": "06-May",
+          "close": 1318.0
+        },
+        {
+          "date": "07-May",
+          "close": 1299.6
+        },
+        {
+          "date": "08-May",
+          "close": 1294.1
+        },
+        {
+          "date": "11-May",
+          "close": 1249.4
+        },
+        {
+          "date": "12-May",
+          "close": 1234.2
+        },
+        {
+          "date": "13-May",
+          "close": 1290.8
+        },
+        {
+          "date": "14-May",
+          "close": 1370.6
+        },
+        {
+          "date": "15-May",
+          "close": 1371.7
+        }
+      ]
+    }
+  ]
+}

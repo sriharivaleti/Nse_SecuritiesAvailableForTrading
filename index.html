@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NSE 1000 Crore Screener</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="stock-panel" aria-label="Stock symbols">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">NSE Screener</p>
+            <h1>1000 Cr+ Stocks</h1>
+          </div>
+          <button id="refreshButton" class="icon-button" type="button" title="Refresh data">R</button>
+        </div>
+
+        <label class="search-box">
+          <span>Search or refresh symbol</span>
+          <input id="searchInput" type="search" placeholder="RELIANCE, TCS, INFY">
+        </label>
+
+        <p id="actionStatus" class="action-status" role="status"></p>
+
+        <div class="list-meta">
+          <span id="stockCount">0 stocks</span>
+          <span id="lastUpdated">Not updated</span>
+        </div>
+
+        <div id="stockList" class="stock-list" role="listbox" aria-label="Filtered stock list"></div>
+      </aside>
+
+      <section class="detail-panel" aria-live="polite">
+        <div id="emptyState" class="empty-state">
+          <p class="eyebrow">Select a symbol</p>
+          <h2>Fundamental analysis will appear here</h2>
+          <p>Run the updater once to populate market cap, close prices, and ratios.</p>
+        </div>
+
+        <article id="stockDetail" class="stock-detail" hidden>
+          <header class="detail-header">
+            <div>
+              <p id="detailExchange" class="eyebrow"></p>
+              <h2 id="detailTitle"></h2>
+              <p id="detailName" class="company-name"></p>
+            </div>
+            <div class="price-tile">
+              <span>Last Price</span>
+              <strong id="detailPrice"></strong>
+            </div>
+          </header>
+
+          <section class="section-block">
+            <div class="section-title">
+              <h3>Past 2 Weeks Close Price</h3>
+              <span id="historyStatus"></span>
+            </div>
+            <div class="table-wrap">
+              <table class="history-table">
+                <tbody id="historyTable"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section-block">
+            <div class="section-title">
+              <h3>Fundamental Analysis</h3>
+              <span>Market cap filter: 1000 Cr+</span>
+            </div>
+            <div id="metricGrid" class="metric-grid"></div>
+          </section>
+        </article>
+      </section>
+    </main>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>

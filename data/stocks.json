@@ -1,0 +1,168 @@
+{
+  "generatedAt": "2026-05-17T16:41:29.883594+00:00",
+  "thresholdCrore": 1000,
+  "source": "EQUITY_L.csv, SME_EQUITY_L.csv, NSE quote data, Yahoo Finance chart data",
+  "stockCount": 2,
+  "stocks": [
+    {
+      "symbol": "RELIANCE",
+      "name": "Reliance Industries Limited",
+      "series": "EQ",
+      "segment": "NSE",
+      "isin": "INE002A01018",
+      "listingDate": "29-NOV-1995",
+      "exchange": "NSE",
+      "fundamentals": {
+        "marketCapCrore": 1812006.93,
+        "freeFloatMarketCapCrore": 901877.527647188,
+        "lastPrice": 1339.0,
+        "close": 1336.4,
+        "previousClose": 1361.8,
+        "changePercent": -1.6742546629460973,
+        "vwap": 1339.37,
+        "currency": "INR",
+        "macro": "Energy",
+        "sector": "Oil Gas & Consumable Fuels",
+        "industry": "Petroleum Products",
+        "basicIndustry": "Refineries & Marketing",
+        "symbolPE": 18.92,
+        "sectorPE": 18.92,
+        "estimatedEPS": 70.77,
+        "faceValue": 10.0,
+        "issuedSize": 13532538722.0,
+        "fiftyTwoWeekHigh": 1611.8,
+        "fiftyTwoWeekHighDate": "05-Jan-2026",
+        "fiftyTwoWeekLow": 1290.0,
+        "fiftyTwoWeekLowDate": "06-Apr-2026",
+        "tradedVolumeLakhs": 199.76,
+        "tradedValueCrore": 2675.55,
+        "dailyVolatility": 1.41,
+        "annualVolatility": 26.94,
+        "tradingStatus": "Active",
+        "classOfShare": "Equity"
+      },
+      "history": [
+        {
+          "date": "04-May",
+          "close": 1463.1
+        },
+        {
+          "date": "05-May",
+          "close": 1463.6
+        },
+        {
+          "date": "06-May",
+          "close": 1437.9
+        },
+        {
+          "date": "07-May",
+          "close": 1436.2
+        },
+        {
+          "date": "08-May",
+          "close": 1435.2
+        },
+        {
+          "date": "11-May",
+          "close": 1388.2
+        },
+        {
+          "date": "12-May",
+          "close": 1364.0
+        },
+        {
+          "date": "13-May",
+          "close": 1358.8
+        },
+        {
+          "date": "14-May",
+          "close": 1361.8
+        },
+        {
+          "date": "15-May",
+          "close": 1336.4
+        }
+      ]
+    },
+    {
+      "symbol": "TCS",
+      "name": "Tata Consultancy Services Limited",
+      "series": "EQ",
+      "segment": "NSE",
+      "isin": "INE467B01029",
+      "listingDate": "25-AUG-2004",
+      "exchange": "NSE",
+      "fundamentals": {
+        "marketCapCrore": 820220.44,
+        "freeFloatMarketCapCrore": 230852.68337192797,
+        "lastPrice": 2267.0,
+        "close": 2264.0,
+        "previousClose": 2246.0,
+        "changePercent": 0.9349955476402494,
+        "vwap": 2280.06,
+        "currency": "INR",
+        "macro": "Information Technology",
+        "sector": "Information Technology",
+        "industry": "IT - Software",
+        "basicIndustry": "Computers - Software & Consulting",
+        "symbolPE": 16.56,
+        "sectorPE": 15.49,
+        "estimatedEPS": 136.9,
+        "faceValue": 1.0,
+        "issuedSize": 3618087518.0,
+        "fiftyTwoWeekHigh": 3623.0,
+        "fiftyTwoWeekHighDate": "13-May-2025",
+        "fiftyTwoWeekLow": 2206.4,
+        "fiftyTwoWeekLowDate": "14-May-2026",
+        "tradedVolumeLakhs": 34.11,
+        "tradedValueCrore": 777.65,
+        "dailyVolatility": 1.47,
+        "annualVolatility": 28.08,
+        "tradingStatus": "Active",
+        "classOfShare": "Equity"
+      },
+      "history": [
+        {
+          "date": "04-May",
+          "close": 2431.3
+        },
+        {
+          "date": "05-May",
+          "close": 2427.3
+        },
+        {
+          "date": "06-May",
+          "close": 2435.4
+        },
+        {
+          "date": "07-May",
+          "close": 2401.4
+        },
+        {
+          "date": "08-May",
+          "close": 2394.4
+        },
+        {
+          "date": "11-May",
+          "close": 2392.9
+        },
+        {
+          "date": "12-May",
+          "close": 2300.3
+        },
+        {
+          "date": "13-May",
+          "close": 2272.8
+        },
+        {
+          "date": "14-May",
+          "close": 2246.0
+        },
+        {
+          "date": "15-May",
+          "close": 2264.0
+        }
+      ]
+    }
+  ]
+}
