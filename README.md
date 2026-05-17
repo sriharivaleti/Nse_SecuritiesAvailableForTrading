@@ -1,6 +1,6 @@
-# NSE 1000 Crore Screener
+# Nse Securities Available For Trading
 
-Local two-panel screener built from `EQUITY_L.csv` and `SME_EQUITY_L.csv`.
+Local two-panel NSE stock screener built from `EQUITY_L.csv` and `SME_EQUITY_L.csv`.
 
 ## Run
 
