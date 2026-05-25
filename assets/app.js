@@ -19,6 +19,7 @@ const detailPrice = document.querySelector("#detailPrice");
 const historyTable = document.querySelector("#historyTable");
 const historyStatus = document.querySelector("#historyStatus");
 const metricGrid = document.querySelector("#metricGrid");
+const recommendationGrid = document.querySelector("#recommendationGrid");
 
 const metricLabels = [
   ["marketCapCrore", "Market Cap"],
@@ -29,6 +30,10 @@ const metricLabels = [
   ["symbolPE", "Stock P/E"],
   ["sectorPE", "Sector P/E"],
   ["estimatedEPS", "Estimated EPS"],
+  ["bookValue", "Book Value"],
+  ["dividendYield", "Dividend Yield"],
+  ["roce", "ROCE"],
+  ["roe", "ROE"],
   ["faceValue", "Face Value"],
   ["issuedSize", "Issued Shares"],
   ["previousClose", "Previous Close"],
@@ -68,7 +73,7 @@ function formatMetric(key, value) {
   if (key === "tradedVolumeLakhs") {
     return `${formatNumber(value, { maximumFractionDigits: 2 })} L`;
   }
-  if (key === "changePercent" || key === "dailyVolatility" || key === "annualVolatility") {
+  if (key === "changePercent" || key === "dailyVolatility" || key === "annualVolatility" || key === "dividendYield" || key === "roce" || key === "roe") {
     return `${formatNumber(value, { maximumFractionDigits: 2 })}%`;
   }
   if (typeof value === "number") return formatNumber(value, { maximumFractionDigits: 2 });
@@ -111,9 +116,12 @@ function renderList() {
 function renderHistory(stock) {
   const history = stock.history || [];
   if (!history.length) {
-    historyStatus.textContent = "No close-price history";
+    historyStatus.textContent = "No price history";
     historyTable.innerHTML = `
       <tr><th>Dates</th><td>N/A</td></tr>
+      <tr><th>Open</th><td>N/A</td></tr>
+      <tr><th>High</th><td>N/A</td></tr>
+      <tr><th>Low</th><td>N/A</td></tr>
       <tr><th>Close</th><td>N/A</td></tr>
     `;
     return;
@@ -121,12 +129,42 @@ function renderHistory(stock) {
 
   historyStatus.textContent = `${history.length} sessions`;
   const dateCells = history.map((item) => `<th>${item.date}</th>`).join("");
-  const closeCells = history
-    .map((item) => `<td>${formatNumber(item.close, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>`)
-    .join("");
+  const row = (label, key) => {
+    const cells = history
+      .map((item) => `<td>${formatNumber(item[key], { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>`)
+      .join("");
+    return `<tr><th>${label}</th>${cells}</tr>`;
+  };
   historyTable.innerHTML = `
     <tr><th>Dates</th>${dateCells}</tr>
-    <tr><th>Close</th>${closeCells}</tr>
+    ${row("Open", "open")}
+    ${row("High", "high")}
+    ${row("Low", "low")}
+    ${row("Close", "close")}
+  `;
+}
+
+function recommendationClass(value) {
+  const normalized = String(value || "").toLowerCase();
+  if (normalized === "buy") return "buy";
+  if (normalized === "avoid") return "avoid";
+  return "watch";
+}
+
+function renderRecommendation(stock) {
+  const rec = stock.recommendation || {};
+  recommendationGrid.innerHTML = `
+    <div class="recommendation-card ${recommendationClass(rec.shortTerm)}">
+      <span>Short Term</span>
+      <strong>${rec.shortTerm || "N/A"}</strong>
+      <p>${rec.shortTermReason || "Not enough data."}</p>
+    </div>
+    <div class="recommendation-card ${recommendationClass(rec.longTerm)}">
+      <span>Long Term</span>
+      <strong>${rec.longTerm || "N/A"}</strong>
+      <p>${rec.longTermReason || "Not enough data."}</p>
+    </div>
+    <p class="recommendation-note">${rec.method || "Educational rule-based view from fetched market data; not financial advice."}</p>
   `;
 }
 
@@ -156,6 +194,7 @@ function selectStock(symbol) {
   detailPrice.textContent = formatMetric("lastPrice", state.selected.fundamentals.lastPrice);
 
   renderHistory(state.selected);
+  renderRecommendation(state.selected);
   renderMetrics(state.selected);
   renderList();
 }
@@ -180,36 +219,39 @@ async function loadData() {
 }
 
 function getRefreshSymbol() {
-  const typed = searchInput.value.trim().toUpperCase();
-  if (typed && /^[A-Z0-9&-]+$/.test(typed)) return typed;
+  const typed = searchInput.value.trim();
+  if (typed) return typed;
   return state.selected?.symbol || "";
 }
 
 async function refreshStock() {
-  const symbol = getRefreshSymbol();
-  if (!symbol) {
-    actionStatus.textContent = "Type a stock symbol first.";
+  const query = getRefreshSymbol();
+  if (!query) {
+    actionStatus.textContent = "Type a stock symbol or company name first.";
     searchInput.focus();
     return;
   }
 
   refreshButton.disabled = true;
   refreshButton.textContent = "...";
-  actionStatus.textContent = `Refreshing ${symbol}...`;
+  actionStatus.textContent = `Fetching ${query} from internet...`;
   try {
-    const response = await fetch(`/api/stock?symbol=${encodeURIComponent(symbol)}`, { method: "POST" });
+    const response = await fetch(`/api/stock?symbol=${encodeURIComponent(query)}`, { method: "POST" });
     const result = await response.json();
     if (!response.ok || !result.ok) throw new Error(result.error || result.errorOutput || result.output || "Updater failed");
+    const resolvedSymbol = result.output?.match(/Updated\s+([A-Z0-9&-]+)/)?.[1] || query.trim().toUpperCase();
     await loadData();
-    const refreshed = state.stocks.find((stock) => stock.symbol === symbol);
+    const refreshed = state.stocks.find((stock) => stock.symbol === resolvedSymbol);
     if (refreshed) {
-      selectStock(symbol);
-      actionStatus.textContent = `${symbol} updated.`;
+      selectStock(resolvedSymbol);
+      searchInput.value = resolvedSymbol;
+      state.query = resolvedSymbol;
+      actionStatus.textContent = `${resolvedSymbol} fetched and saved.`;
     } else {
-      actionStatus.textContent = `${symbol} is below 1000 Cr market cap or data was unavailable.`;
+      actionStatus.textContent = `${query} could not be saved. Try the exact NSE symbol.`;
     }
   } catch (error) {
-    actionStatus.textContent = `${symbol} refresh failed.`;
+    actionStatus.textContent = `${query} fetch failed.`;
     stockList.innerHTML = `<div class="message">${error.message}</div>`;
   } finally {
     refreshButton.disabled = false;

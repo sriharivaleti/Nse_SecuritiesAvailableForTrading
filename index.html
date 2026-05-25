@@ -19,7 +19,7 @@
 
         <label class="search-box">
           <span>Search or refresh symbol</span>
-          <input id="searchInput" type="search" placeholder="RELIANCE, TCS, INFY">
+          <input id="searchInput" type="search" placeholder="RELIANCE, TCS, Tata Consultancy">
         </label>
 
         <p id="actionStatus" class="action-status" role="status"></p>
@@ -54,7 +54,7 @@
 
           <section class="section-block">
             <div class="section-title">
-              <h3>Past 2 Weeks Close Price</h3>
+              <h3>Past 2 Weeks Price History</h3>
               <span id="historyStatus"></span>
             </div>
             <div class="table-wrap">
@@ -66,8 +66,16 @@
 
           <section class="section-block">
             <div class="section-title">
+              <h3>Recommendation</h3>
+              <span>Rule-based view</span>
+            </div>
+            <div id="recommendationGrid" class="recommendation-grid"></div>
+          </section>
+
+          <section class="section-block">
+            <div class="section-title">
               <h3>Fundamental Analysis</h3>
-              <span>Market cap filter: 1000 Cr+</span>
+              <span>Saved from live web data</span>
             </div>
             <div id="metricGrid" class="metric-grid"></div>
           </section>

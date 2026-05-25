@@ -1,167 +1,527 @@
 {
-  "generatedAt": "2026-05-17T16:45:58.457559+00:00",
-  "thresholdCrore": 1000,
-  "source": "EQUITY_L.csv, SME_EQUITY_L.csv, NSE quote data, Yahoo Finance chart data",
-  "stockCount": 2,
+  "generatedAt": "2026-05-25T07:27:26.302536+00:00",
+  "thresholdCrore": null,
+  "source": "Yahoo Finance chart/search data and Screener.in fundamentals",
+  "stockCount": 4,
   "stocks": [
     {
-      "symbol": "RELIANCE",
-      "name": "Reliance Industries Limited",
+      "symbol": "HDFCBANK",
+      "name": "HDFC Bank Ltd",
       "series": "EQ",
-      "segment": "NSE",
-      "isin": "INE002A01018",
-      "listingDate": "29-NOV-1995",
+      "segment": "EQUITY",
+      "isin": "",
+      "listingDate": "",
+      "sector": "Financial Services",
+      "industry": "Banks\u2014Regional",
       "exchange": "NSE",
       "fundamentals": {
-        "marketCapCrore": 1812006.93,
-        "freeFloatMarketCapCrore": 901877.527647188,
-        "lastPrice": 1339.0,
-        "close": 1336.4,
-        "previousClose": 1361.8,
-        "changePercent": -1.6742546629460973,
-        "vwap": 1339.37,
+        "marketCapCrore": 1205918.0,
+        "freeFloatMarketCapCrore": null,
+        "lastPrice": 783.0,
+        "close": 783.35,
+        "previousClose": 784.85,
+        "changePercent": -0.19111932216347072,
+        "vwap": null,
         "currency": "INR",
-        "macro": "Energy",
-        "sector": "Oil Gas & Consumable Fuels",
-        "industry": "Petroleum Products",
-        "basicIndustry": "Refineries & Marketing",
-        "symbolPE": 18.92,
-        "sectorPE": 18.92,
-        "estimatedEPS": 70.77,
-        "faceValue": 10.0,
-        "issuedSize": 13532538722.0,
-        "fiftyTwoWeekHigh": 1611.8,
-        "fiftyTwoWeekHighDate": "05-Jan-2026",
-        "fiftyTwoWeekLow": 1290.0,
-        "fiftyTwoWeekLowDate": "06-Apr-2026",
-        "tradedVolumeLakhs": 199.76,
-        "tradedValueCrore": 2675.55,
-        "dailyVolatility": 1.41,
-        "annualVolatility": 26.94,
+        "macro": null,
+        "sector": "Financial Services",
+        "industry": "Banks\u2014Regional",
+        "basicIndustry": "Banks\u2014Regional",
+        "symbolPE": 15.9,
+        "sectorPE": null,
+        "estimatedEPS": 49.25,
+        "bookValue": 378.0,
+        "dividendYield": 1.65,
+        "roce": 7.04,
+        "roe": 13.8,
+        "faceValue": 1.0,
+        "issuedSize": null,
+        "fiftyTwoWeekHigh": 1020.5,
+        "fiftyTwoWeekHighDate": null,
+        "fiftyTwoWeekLow": 726.65,
+        "fiftyTwoWeekLowDate": null,
+        "tradedVolumeLakhs": 162.48323,
+        "tradedValueCrore": null,
+        "dailyVolatility": null,
+        "annualVolatility": null,
         "tradingStatus": "Active",
-        "classOfShare": "Equity"
+        "classOfShare": "Equity",
+        "screenerUrl": "https://www.screener.in/company/HDFCBANK/consolidated/",
+        "rawCurrentPrice": "\u20b9 783"
       },
       "history": [
         {
-          "date": "04-May",
-          "close": 1463.1
+          "date": "12-May",
+          "open": 756.6,
+          "high": 759.7,
+          "low": 747.8,
+          "close": 750.45
         },
         {
-          "date": "05-May",
-          "close": 1463.6
+          "date": "13-May",
+          "open": 752.0,
+          "high": 759.95,
+          "low": 747.35,
+          "close": 749.6
         },
         {
-          "date": "06-May",
-          "close": 1437.9
+          "date": "14-May",
+          "open": 751.0,
+          "high": 778.3,
+          "low": 747.0,
+          "close": 769.55
         },
         {
-          "date": "07-May",
-          "close": 1436.2
+          "date": "15-May",
+          "open": 773.0,
+          "high": 781.9,
+          "low": 765.4,
+          "close": 767.5
         },
         {
-          "date": "08-May",
-          "close": 1435.2
+          "date": "18-May",
+          "open": 759.0,
+          "high": 774.1,
+          "low": 751.35,
+          "close": 768.65
         },
         {
-          "date": "11-May",
-          "close": 1388.2
+          "date": "19-May",
+          "open": 766.7,
+          "high": 770.8,
+          "low": 760.25,
+          "close": 762.45
         },
+        {
+          "date": "20-May",
+          "open": 759.6,
+          "high": 762.25,
+          "low": 755.15,
+          "close": 759.5
+        },
+        {
+          "date": "21-May",
+          "open": 767.0,
+          "high": 768.25,
+          "low": 755.15,
+          "close": 759.15
+        },
+        {
+          "date": "22-May",
+          "open": 759.15,
+          "high": 775.0,
+          "low": 759.15,
+          "close": 766.8
+        },
+        {
+          "date": "25-May",
+          "open": 776.0,
+          "high": 785.95,
+          "low": 775.2,
+          "close": 783.35
+        }
+      ],
+      "recommendation": {
+        "shortTerm": "Buy",
+        "shortTermReason": "price is above the recent 10-session average; recent 10-session return is positive (4.38%); price is not close to its 52-week high",
+        "longTerm": "Buy",
+        "longTermReason": "stock P/E is within a moderate range; ROE is modest; market cap is above 1000 Cr; price is near its 52-week low",
+        "method": "Educational rule-based view using Yahoo Finance price data and Screener.in fundamentals; not financial advice."
+      },
+      "dataSources": [
+        "https://www.screener.in/company/HDFCBANK/consolidated/",
+        "https://query1.finance.yahoo.com/v8/finance/chart",
+        "https://query2.finance.yahoo.com/v1/finance/search"
+      ]
+    },
+    {
+      "symbol": "INFY",
+      "name": "Infosys Ltd",
+      "series": "EQ",
+      "segment": "EQUITY",
+      "isin": "",
+      "listingDate": "",
+      "sector": null,
+      "industry": null,
+      "exchange": "NSE",
+      "fundamentals": {
+        "marketCapCrore": 475526.0,
+        "freeFloatMarketCapCrore": null,
+        "lastPrice": 1172.0,
+        "close": 1171.2,
+        "previousClose": 1154.6,
+        "changePercent": 1.4377273514637223,
+        "vwap": null,
+        "currency": "INR",
+        "macro": null,
+        "sector": null,
+        "industry": null,
+        "basicIndustry": null,
+        "symbolPE": 15.8,
+        "sectorPE": null,
+        "estimatedEPS": 74.18,
+        "bookValue": 229.0,
+        "dividendYield": 4.08,
+        "roce": 40.0,
+        "roe": 31.9,
+        "faceValue": 5.0,
+        "issuedSize": null,
+        "fiftyTwoWeekHigh": 1728.0,
+        "fiftyTwoWeekHighDate": null,
+        "fiftyTwoWeekLow": 1089.0,
+        "fiftyTwoWeekLowDate": null,
+        "tradedVolumeLakhs": 30.85627,
+        "tradedValueCrore": null,
+        "dailyVolatility": null,
+        "annualVolatility": null,
+        "tradingStatus": "Active",
+        "classOfShare": "Equity",
+        "screenerUrl": "https://www.screener.in/company/INFY/consolidated/",
+        "rawCurrentPrice": "\u20b9 1,172"
+      },
+      "history": [
         {
           "date": "12-May",
+          "open": 1162.0,
+          "high": 1162.0,
+          "low": 1123.0,
+          "close": 1140.3
+        },
+        {
+          "date": "13-May",
+          "open": 1136.6,
+          "high": 1142.6,
+          "low": 1121.0,
+          "close": 1123.1
+        },
+        {
+          "date": "14-May",
+          "open": 1119.8,
+          "high": 1121.9,
+          "low": 1089.0,
+          "close": 1095.0
+        },
+        {
+          "date": "15-May",
+          "open": 1102.0,
+          "high": 1133.2,
+          "low": 1101.6,
+          "close": 1119.0
+        },
+        {
+          "date": "18-May",
+          "open": 1119.0,
+          "high": 1146.1,
+          "low": 1118.0,
+          "close": 1142.5
+        },
+        {
+          "date": "19-May",
+          "open": 1162.0,
+          "high": 1198.4,
+          "low": 1162.0,
+          "close": 1196.9
+        },
+        {
+          "date": "20-May",
+          "open": 1187.0,
+          "high": 1206.9,
+          "low": 1184.9,
+          "close": 1193.7
+        },
+        {
+          "date": "21-May",
+          "open": 1196.1,
+          "high": 1201.8,
+          "low": 1177.0,
+          "close": 1181.2
+        },
+        {
+          "date": "22-May",
+          "open": 1182.5,
+          "high": 1191.8,
+          "low": 1172.5,
+          "close": 1174.5
+        },
+        {
+          "date": "25-May",
+          "open": 1183.0,
+          "high": 1185.0,
+          "low": 1169.4,
+          "close": 1171.2
+        }
+      ],
+      "recommendation": {
+        "shortTerm": "Buy",
+        "shortTermReason": "price is above the recent 10-session average; recent 10-session return is positive (2.71%); price is not close to its 52-week high",
+        "longTerm": "Buy",
+        "longTermReason": "stock P/E is within a moderate range; ROE is strong; market cap is above 1000 Cr; price is near its 52-week low",
+        "method": "Educational rule-based view using Yahoo Finance price data and Screener.in fundamentals; not financial advice."
+      },
+      "dataSources": [
+        "https://www.screener.in/company/INFY/consolidated/",
+        "https://query1.finance.yahoo.com/v8/finance/chart",
+        "https://query2.finance.yahoo.com/v1/finance/search"
+      ]
+    },
+    {
+      "symbol": "RELIANCE",
+      "name": "Reliance Industries Ltd",
+      "series": "EQ",
+      "segment": "EQUITY",
+      "isin": "",
+      "listingDate": "",
+      "sector": null,
+      "industry": null,
+      "exchange": "NSE",
+      "fundamentals": {
+        "marketCapCrore": 1838666.0,
+        "freeFloatMarketCapCrore": null,
+        "lastPrice": 1359.0,
+        "close": 1359.0,
+        "previousClose": 1327.8,
+        "changePercent": 2.3497514685946714,
+        "vwap": null,
+        "currency": "INR",
+        "macro": null,
+        "sector": null,
+        "industry": null,
+        "basicIndustry": null,
+        "symbolPE": 22.7,
+        "sectorPE": null,
+        "estimatedEPS": 59.87,
+        "bookValue": 668.0,
+        "dividendYield": 0.41,
+        "roce": 10.5,
+        "roe": 9.25,
+        "faceValue": 10.0,
+        "issuedSize": null,
+        "fiftyTwoWeekHigh": 1611.8,
+        "fiftyTwoWeekHighDate": null,
+        "fiftyTwoWeekLow": 1290.0,
+        "fiftyTwoWeekLowDate": null,
+        "tradedVolumeLakhs": 36.64459,
+        "tradedValueCrore": null,
+        "dailyVolatility": null,
+        "annualVolatility": null,
+        "tradingStatus": "Active",
+        "classOfShare": "Equity",
+        "screenerUrl": "https://www.screener.in/company/RELIANCE/consolidated/",
+        "rawCurrentPrice": "\u20b9 1,359"
+      },
+      "history": [
+        {
+          "date": "12-May",
+          "open": 1392.0,
+          "high": 1393.5,
+          "low": 1360.3,
           "close": 1364.0
         },
         {
           "date": "13-May",
+          "open": 1361.4,
+          "high": 1372.4,
+          "low": 1352.4,
           "close": 1358.8
         },
         {
           "date": "14-May",
+          "open": 1365.2,
+          "high": 1378.0,
+          "low": 1358.4,
           "close": 1361.8
         },
         {
           "date": "15-May",
+          "open": 1356.8,
+          "high": 1364.8,
+          "low": 1329.2,
           "close": 1336.4
+        },
+        {
+          "date": "18-May",
+          "open": 1334.0,
+          "high": 1342.0,
+          "low": 1318.7,
+          "close": 1335.9
+        },
+        {
+          "date": "19-May",
+          "open": 1338.7,
+          "high": 1344.0,
+          "low": 1318.4,
+          "close": 1322.7
+        },
+        {
+          "date": "20-May",
+          "open": 1318.7,
+          "high": 1362.9,
+          "low": 1312.6,
+          "close": 1359.7
+        },
+        {
+          "date": "21-May",
+          "open": 1367.2,
+          "high": 1370.9,
+          "low": 1345.2,
+          "close": 1349.6
+        },
+        {
+          "date": "22-May",
+          "open": 1350.0,
+          "high": 1367.4,
+          "low": 1349.1,
+          "close": 1354.5
+        },
+        {
+          "date": "25-May",
+          "open": 1366.8,
+          "high": 1371.1,
+          "low": 1357.0,
+          "close": 1359.0
         }
+      ],
+      "recommendation": {
+        "shortTerm": "Buy",
+        "shortTermReason": "price is above the recent 10-session average; recent 10-session return is weak (-0.37%); price is not close to its 52-week high",
+        "longTerm": "Buy",
+        "longTermReason": "stock P/E is within a moderate range; ROE is modest; market cap is above 1000 Cr; price is near its 52-week low",
+        "method": "Educational rule-based view using Yahoo Finance price data and Screener.in fundamentals; not financial advice."
+      },
+      "dataSources": [
+        "https://www.screener.in/company/RELIANCE/consolidated/",
+        "https://query1.finance.yahoo.com/v8/finance/chart",
+        "https://query2.finance.yahoo.com/v1/finance/search"
       ]
     },
     {
       "symbol": "TCS",
-      "name": "Tata Consultancy Services Limited",
+      "name": "Tata Consultancy Services Ltd",
       "series": "EQ",
-      "segment": "NSE",
-      "isin": "INE467B01029",
-      "listingDate": "25-AUG-2004",
+      "segment": "EQUITY",
+      "isin": "",
+      "listingDate": "",
+      "sector": null,
+      "industry": null,
       "exchange": "NSE",
       "fundamentals": {
-        "marketCapCrore": 820220.44,
-        "freeFloatMarketCapCrore": 230852.68337192797,
-        "lastPrice": 2267.0,
-        "close": 2264.0,
-        "previousClose": 2246.0,
-        "changePercent": 0.9349955476402494,
-        "vwap": 2280.06,
+        "marketCapCrore": 834874.0,
+        "freeFloatMarketCapCrore": null,
+        "lastPrice": 2308.0,
+        "close": 2310.6,
+        "previousClose": 2396.9,
+        "changePercent": -3.6004839584463344,
+        "vwap": null,
         "currency": "INR",
-        "macro": "Information Technology",
-        "sector": "Information Technology",
-        "industry": "IT - Software",
-        "basicIndustry": "Computers - Software & Consulting",
-        "symbolPE": 16.56,
-        "sectorPE": 15.49,
-        "estimatedEPS": 136.9,
+        "macro": null,
+        "sector": null,
+        "industry": null,
+        "basicIndustry": null,
+        "symbolPE": 16.0,
+        "sectorPE": null,
+        "estimatedEPS": 144.25,
+        "bookValue": 296.0,
+        "dividendYield": 2.79,
+        "roce": 63.0,
+        "roe": 51.8,
         "faceValue": 1.0,
-        "issuedSize": 3618087518.0,
-        "fiftyTwoWeekHigh": 3623.0,
-        "fiftyTwoWeekHighDate": "13-May-2025",
+        "issuedSize": null,
+        "fiftyTwoWeekHigh": 3545.0,
+        "fiftyTwoWeekHighDate": null,
         "fiftyTwoWeekLow": 2206.4,
-        "fiftyTwoWeekLowDate": "14-May-2026",
-        "tradedVolumeLakhs": 34.11,
-        "tradedValueCrore": 777.65,
-        "dailyVolatility": 1.47,
-        "annualVolatility": 28.08,
+        "fiftyTwoWeekLowDate": null,
+        "tradedVolumeLakhs": 24.24751,
+        "tradedValueCrore": null,
+        "dailyVolatility": null,
+        "annualVolatility": null,
         "tradingStatus": "Active",
-        "classOfShare": "Equity"
+        "classOfShare": "Equity",
+        "screenerUrl": "https://www.screener.in/company/TCS/consolidated/",
+        "rawCurrentPrice": "\u20b9 2,308"
       },
       "history": [
         {
-          "date": "04-May",
-          "close": 2431.3
-        },
-        {
-          "date": "05-May",
-          "close": 2427.3
-        },
-        {
-          "date": "06-May",
-          "close": 2435.4
-        },
-        {
-          "date": "07-May",
-          "close": 2401.4
-        },
-        {
-          "date": "08-May",
-          "close": 2394.4
-        },
-        {
-          "date": "11-May",
-          "close": 2392.9
-        },
-        {
           "date": "12-May",
+          "open": 2375.0,
+          "high": 2375.0,
+          "low": 2283.0,
           "close": 2300.3
         },
         {
           "date": "13-May",
+          "open": 2306.0,
+          "high": 2309.2,
+          "low": 2269.0,
           "close": 2272.8
         },
         {
           "date": "14-May",
+          "open": 2265.0,
+          "high": 2265.0,
+          "low": 2206.4,
           "close": 2246.0
         },
         {
           "date": "15-May",
+          "open": 2252.0,
+          "high": 2304.9,
+          "low": 2252.0,
           "close": 2264.0
+        },
+        {
+          "date": "18-May",
+          "open": 2264.0,
+          "high": 2292.9,
+          "low": 2252.2,
+          "close": 2283.2
+        },
+        {
+          "date": "19-May",
+          "open": 2300.0,
+          "high": 2377.6,
+          "low": 2297.1,
+          "close": 2327.1
+        },
+        {
+          "date": "20-May",
+          "open": 2323.9,
+          "high": 2342.0,
+          "low": 2317.8,
+          "close": 2327.4
+        },
+        {
+          "date": "21-May",
+          "open": 2331.0,
+          "high": 2335.9,
+          "low": 2314.0,
+          "close": 2327.2
+        },
+        {
+          "date": "22-May",
+          "open": 2331.1,
+          "high": 2340.0,
+          "low": 2308.1,
+          "close": 2317.3
+        },
+        {
+          "date": "25-May",
+          "open": 2325.0,
+          "high": 2326.1,
+          "low": 2293.0,
+          "close": 2310.6
         }
+      ],
+      "recommendation": {
+        "shortTerm": "Buy",
+        "shortTermReason": "price is above the recent 10-session average; recent 10-session return is positive (0.45%); price is not close to its 52-week high",
+        "longTerm": "Buy",
+        "longTermReason": "stock P/E is within a moderate range; ROE is strong; market cap is above 1000 Cr; price is near its 52-week low",
+        "method": "Educational rule-based view using Yahoo Finance price data and Screener.in fundamentals; not financial advice."
+      },
+      "dataSources": [
+        "https://www.screener.in/company/TCS/consolidated/",
+        "https://query1.finance.yahoo.com/v8/finance/chart",
+        "https://query2.finance.yahoo.com/v1/finance/search"
       ]
     }
   ]

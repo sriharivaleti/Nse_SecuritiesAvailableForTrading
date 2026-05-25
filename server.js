@@ -4,7 +4,7 @@ const path = require("path");
 const { spawn } = require("child_process");
 
 const root = __dirname;
-const port = Number(process.env.PORT || 3000);
+const port = Number(process.env.PORT || 3001);
 
 const types = {
   ".html": "text/html; charset=utf-8",
@@ -67,15 +67,15 @@ const server = http.createServer((req, res) => {
   }
 
   if (req.method === "POST" && url.pathname === "/api/stock") {
-    const symbol = (url.searchParams.get("symbol") || "").trim().toUpperCase();
-    if (!/^[A-Z0-9&-]+$/.test(symbol)) {
-      send(res, 400, JSON.stringify({ ok: false, error: "Enter a valid NSE symbol." }), {
+    const query = (url.searchParams.get("symbol") || "").trim();
+    if (!query || query.length > 80 || !/^[A-Za-z0-9 .&()-]+$/.test(query)) {
+      send(res, 400, JSON.stringify({ ok: false, error: "Enter a valid NSE symbol or company name." }), {
         "Content-Type": "application/json; charset=utf-8",
       });
       return;
     }
 
-    runUpdater(res, ["--symbol", symbol]);
+    runUpdater(res, ["--symbol", query]);
     return;
   }
 
